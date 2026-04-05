@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object CardInstance {
 
-    private const val BASE_URL = "https://deckofcardsapi.com/"
+        private const val BASE_URL = "https://deckofcardsapi.com/"
 
     val api: ApiService by lazy {
         Retrofit.Builder()

@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity() {
             val id1 = (1..826).random()
             val id2 = (1..826).random()
 
+            Log.d("Hello",id1.toString())
+
             winnerText.text = "⚔️ Summoning fighters..."
             roastText.text = ""
 
@@ -38,8 +41,10 @@ class MainActivity : AppCompatActivity() {
 
             // 🔹 CHARACTER 1
             RickInstance.api.getCharacter(id1).enqueue(object : Callback<Character> {
+
                 override fun onResponse(call: Call<Character>, response: Response<Character>) {
                     val data = response.body()
+                    Log.d("Hello",data.toString())
 
                     name1 = data?.name ?: "Unknown"
                     c1.text = name1
@@ -50,6 +55,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<Character>, t: Throwable) {
+                    Log.d("Hello",t.toString())
                     c1.text = "Error"
                 }
             })
