@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D001F"
+    android:padding="16dp">
+
+    <!-- TITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔥 Battle of Fate 🔥"
+        android:textColor="#BB86FC"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <!-- CHARACTERS -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#2A0A4A">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <!-- CHARACTER 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/character1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Character 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- VS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚔️"
+                android:textSize="20sp"
+                android:textColor="#FF4081"
+                android:layout_marginHorizontal="8dp"/>
+
+            <!-- CHARACTER 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/character2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Character 2"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CARD -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#1F0033">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/cardImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/cardText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:textColor="#BB86FC"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- RESULT -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#002B36">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/winner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Winner"
+                android:textColor="#00FFAA"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/joke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roast"
+                android:textColor="#FF5555"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- BUTTON -->
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#BB86FC"
+        android:text="⚡ FIGHT AGAIN"
+        android:textColor="#000" />
+
+</LinearLayout>
